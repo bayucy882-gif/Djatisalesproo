@@ -94,12 +94,14 @@ function ambilLokasiOutlet(){
 
         },
 
-        function(){
+        function(error){
 
-            alert("Gagal mengambil lokasi.");
+    alert(
+        "Kode Error: " + error.code +
+        "\nPesan: " + error.message
+    );
 
-        }
-
+}
     );
 
 }
