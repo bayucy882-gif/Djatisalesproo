@@ -11,17 +11,28 @@
 <div class="login-container">
 
 <h2>📍 GPS CHECK IN</h2>
-
 <p id="status">Belum mengambil lokasi</p>
+<label>Pilih Outlet</label>
 
-<p><b>Latitude :</b> <span id="lat">-</span></p>
+<select id="pilihOutlet">
+    <option value="">-- Pilih Outlet --</option>
+</select>
 
-<p><b>Longitude :</b> <span id="lng">-</span></p>
-
+<br><br>
 <button onclick="ambilLokasi()">
 📍 Ambil Lokasi
 </button>
+<hr>
 
+<h3>Hasil Check In</h3>
+
+<p><b>Latitude:</b> <span id="lat">-</span></p>
+
+<p><b>Longitude:</b> <span id="lng">-</span></p>
+
+<p><b>Akurasi:</b> <span id="akurasi">-</span> Meter</p>
+
+<p><b>Waktu:</b> <span id="waktu">-</span></p>
 <br><br>
 
 <button onclick="location.href='dashboard.html'">
