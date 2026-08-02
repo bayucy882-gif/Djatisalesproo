@@ -38,8 +38,7 @@ function simpanOutlet() {
 
     alert("Akan pindah ke order.html");
 
-    window.location.href = "order.html";
-
+    window.location.replace("order.html");
 }
 }
 
