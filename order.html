@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Input Order</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h1>📦 INPUT ORDER</h1>
+
+<label>Tanggal Order</label>
+
+<input
+type="date"
+id="tanggal">
+
+<br><br>
+
+<select id="outlet">
+</select>
+
+<select id="produk" onchange="hitungTotal()">
+
+<option value="">Pilih Produk</option>
+
+<option value="7500">Djati Coklat 12 - Rp7.500</option>
+
+<option value="9000">Djati Coklat 16 - Rp9.000</option>
+
+<option value="11000">Nusantara Djati Leci - Rp11.000</option>
+
+<option value="11000">Nusantara Djati Apel - Rp11.000</option>
+
+<option value="11000">Nusantara Djati Refill - Rp11.000</option>
+
+</select>
+
+<input
+type="number"
+id="qty"
+placeholder="Jumlah Pack"
+oninput="hitungTotal()">
+
+<h2 id="total">Rp0</h2>
+
+<button onclick="simpanOrder()">
+SIMPAN ORDER
+</button>
+
+<br><br>
+
+<button onclick="location.href='dashboard.html'">
+KEMBALI
+</button>
+
+<div id="listOrder"></div>
+
+</div>
+
+<script src="js/order.js"></script>
+
+</body>
+</html>

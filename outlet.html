@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Outlet</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-container">
+
+    <h1>🏪 DATA OUTLET</h1>
+
+    <input type="text" id="namaOutlet" placeholder="Nama Outlet">
+
+    <input type="text" id="pemilik" placeholder="Nama Pemilik">
+
+    <input type="text" id="alamat" placeholder="Alamat">
+
+    <input type="text" id="nohp" placeholder="Nomor HP">
+<label>Rute</label>
+
+<select id="rute">
+    <option value="">Pilih Rute</option>
+    <option value="R1">R1</option>
+    <option value="R2">R2</option>
+    <option value="R3">R3</option>
+    <option value="R4">R4</option>
+    <option value="R5">R5</option>
+    <option value="R6">R6</option>
+    <option value="R7">R7</option>
+    <option value="R8">R8</option>
+    <option value="R9">R9</option>
+    <option value="R10">R10</option>
+</select>
+    <button onclick="simpanOutlet()">
+        SIMPAN OUTLET
+    </button>
+
+    <br><br>
+
+    <button onclick="location.href='dashboard.html'">
+        KEMBALI
+    </button>
+
+    <div id="daftarOutlet"></div>
+
+</div>
+
+<script src="js/outlet.js"></script>
+
+</body>
+</html>
