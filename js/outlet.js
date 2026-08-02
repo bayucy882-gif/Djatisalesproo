@@ -74,7 +74,7 @@ function hapusOutlet(index) {
 
 }
 function ambilLokasiOutlet(){
-
+alert("Tombol Ambil Koordinat ditekan");
     if(!navigator.geolocation){
         alert("Browser tidak mendukung GPS");
         return;
