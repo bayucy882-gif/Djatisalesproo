@@ -1,5 +1,3 @@
-let dataOutlet = JSON.parse(localStorage.getItem("outlet")) || [];
-tampilOutlet();
 let dataOutlet =
 JSON.parse(localStorage.getItem("outlet")) || [];
 
@@ -55,23 +53,5 @@ function tampilOutlet(){
     });
 
     document.getElementById("pilihOutlet").innerHTML = html;
-
-}
-function tampilOutlet(){
-
-    let html =
-    '<option value="">-- Pilih Outlet --</option>';
-
-    dataOutlet.forEach(function(item,index){
-
-        html +=
-        `<option value="${index}">
-        ${item.nama}
-        </option>`;
-
-    });
-
-    document.getElementById("pilihOutlet").innerHTML =
-    html;
 
 }
