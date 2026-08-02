@@ -17,15 +17,16 @@ function simpanOutlet() {
     }
 
     dataOutlet.push({
-        nama: nama,
-        pemilik: pemilik,
-        alamat: alamat,
-        nohp: nohp,
-        rute: rute
-    });
+    nama: nama,
+    pemilik: pemilik,
+    alamat: alamat,
+    nohp: nohp,
+    rute: rute,
+    latitude: latitude,
+    longitude: longitude
+});
 
     localStorage.setItem("outlet", JSON.stringify(dataOutlet));
-
     document.getElementById("namaOutlet").value = "";
     document.getElementById("pemilik").value = "";
     document.getElementById("alamat").value = "";
@@ -33,7 +34,13 @@ function simpanOutlet() {
 
     tampilOutlet();
 
-    alert("Outlet berhasil disimpan!");
+    if(confirm("Outlet berhasil disimpan.\n\nLangsung buat order?")){
+
+    alert("Akan pindah ke order.html");
+
+    window.location.href = "order.html";
+
+}
 }
 
 function tampilOutlet() {
@@ -67,7 +74,7 @@ function hapusOutlet(index) {
         dataOutlet.splice(index, 1);
 
         localStorage.setItem("outlet", JSON.stringify(dataOutlet));
-
+        localStorage.setItem("outletTerakhir", nama);
         tampilOutlet();
 
     }
