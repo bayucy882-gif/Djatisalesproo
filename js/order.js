@@ -1,4 +1,5 @@
 alert("order.js berhasil dimuat");
+alert(localStorage.getItem("outletTerakhir"));
 let dataOrder = JSON.parse(localStorage.getItem("order")) || [];
 let dataOutlet = JSON.parse(localStorage.getItem("outlet")) || [];
 
@@ -106,6 +107,26 @@ Total : Rp ${item.total.toLocaleString("id-ID")}<br><br>
 
     document.getElementById("listOrder").innerHTML = html;
 
+}
+function hapusOrder(index){
+
+    if(confirm("Hapus order ini?")){
+
+        dataOrder.splice(index,1);
+
+        localStorage.setItem("order",JSON.stringify(dataOrder));
+
+        tampilOrder();
+
+    }
+
+}
+
+function editOrder(index){
+
+    alert("Fitur edit akan kita lengkapi pada langkah berikutnya.");
+
+}
 }
 function hapusOrder(index){
 
