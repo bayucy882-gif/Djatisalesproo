@@ -18,7 +18,13 @@ function tampilOutlet() {
             </option>
         `;
     });
+let outletTerakhir = localStorage.getItem("outletTerakhir");
 
+if(outletTerakhir){
+
+    pilih.value = outletTerakhir;
+
+}
 }
 
 function hitungTotal() {
@@ -106,6 +112,20 @@ function hapusOrder(index){
     if(confirm("Hapus order ini?")){
 
         dataOrder.splice(index,1);
+
+        localStorage.setItem("order",JSON.stringify(dataOrder));
+
+        tampilOrder();
+
+    }
+
+}
+
+function editOrder(index){
+
+    alert("Fitur edit akan kita lengkapi pada langkah berikutnya.");
+
+}        dataOrder.splice(index,1);
 
         localStorage.setItem("order",JSON.stringify(dataOrder));
 
