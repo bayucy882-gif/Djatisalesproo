@@ -21,7 +21,7 @@ function ambilLokasi(){
             document.getElementById("lng").innerHTML =
             pos.coords.longitude;
 let index = document.getElementById("pilihOutlet").value;
-
+alert("Index outlet = " + index);
 if(index==""){
     alert("Pilih outlet terlebih dahulu!");
     return;
@@ -33,9 +33,12 @@ if(index==""){
 
         function(error){
 
-            alert("GPS gagal diakses.");
+    alert(
+        "Kode Error: " + error.code +
+        "\nPesan: " + error.message
+    );
 
-        }
+}
 
     );
 
