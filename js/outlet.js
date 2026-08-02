@@ -9,6 +9,8 @@ function simpanOutlet() {
     let alamat = document.getElementById("alamat").value;
     let nohp = document.getElementById("nohp").value;
     let rute = document.getElementById("rute").value;
+    let latitude = document.getElementById("latitude").value;
+    let longitude = document.getElementById("longitude").value;
     if (nama === "" || pemilik === "") {
         alert("Nama Outlet dan Pemilik wajib diisi!");
         return;
@@ -18,7 +20,7 @@ function simpanOutlet() {
         nama: nama,
         pemilik: pemilik,
         alamat: alamat,
-        nohp: nohp
+        nohp: nohp,
         rute: rute
     });
 
@@ -69,5 +71,35 @@ function hapusOutlet(index) {
         tampilOutlet();
 
     }
+
+}
+function ambilLokasiOutlet(){
+
+    if(!navigator.geolocation){
+        alert("Browser tidak mendukung GPS");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(pos){
+
+            document.getElementById("latitude").value =
+            pos.coords.latitude;
+
+            document.getElementById("longitude").value =
+            pos.coords.longitude;
+
+            alert("Koordinat berhasil diambil.");
+
+        },
+
+        function(){
+
+            alert("Gagal mengambil lokasi.");
+
+        }
+
+    );
 
 }
