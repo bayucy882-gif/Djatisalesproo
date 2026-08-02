@@ -102,6 +102,7 @@ alert("Tombol Ambil Koordinat ditekan");
     );
 
 }
+
     );
 
 }
