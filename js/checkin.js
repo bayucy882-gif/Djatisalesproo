@@ -22,7 +22,12 @@ function ambilLokasi(){
 
             document.getElementById("lng").innerHTML =
             pos.coords.longitude;
+let index = document.getElementById("pilihOutlet").value;
 
+if(index==""){
+    alert("Pilih outlet terlebih dahulu!");
+    return;
+}
             document.getElementById("status").innerHTML =
             "Check In Berhasil";
 
