@@ -30,15 +30,14 @@ if(outletTerakhir){
 
 function hitungTotal() {
 
-    alert("Fungsi hitungTotal berjalan");
-
-    let harga = Number(document.getElementById("produk").value);
-    let qty = Number(document.getElementById("qty").value);
+    let harga = parseInt(document.getElementById("produk").value) || 0;
+    let qty = parseInt(document.getElementById("qty").value) || 0;
 
     let total = harga * qty;
 
     document.getElementById("total").innerHTML =
-        "Rp " + total.toLocaleString("id-ID");
+    "Rp " + total.toLocaleString("id-ID");
+
 }
 
 function simpanOrder() {
@@ -106,6 +105,27 @@ Total : Rp ${item.total.toLocaleString("id-ID")}<br><br>
     });
 
     document.getElementById("listOrder").innerHTML = html;
+
+}
+function hapusOrder(index){
+
+    if(confirm("Hapus order ini?")){
+
+        dataOrder.splice(index,1);
+
+        localStorage.setItem("order",JSON.stringify(dataOrder));
+
+        tampilOrder();
+
+    }
+
+}
+
+function editOrder(index){
+
+    alert("Fitur edit akan kita lengkapi pada langkah berikutnya.");
+
+}    document.getElementById("listOrder").innerHTML = html;
 
 }
 function hapusOrder(index){
