@@ -38,7 +38,8 @@ function simpanOutlet() {
 
     alert("Akan pindah ke order.html");
 
-    window.location.replace("order.html");
+    window.location.href = "order.html";
+
 }
 }
 
@@ -106,6 +107,12 @@ alert("Tombol Ambil Koordinat ditekan");
         "Kode Error: " + error.code +
         "\nPesan: " + error.message
     );
+
+}
+
+    );
+
+}    );
 
 }
 
